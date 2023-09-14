@@ -1,0 +1,64 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+    margin: 0 auto;
+    font-family: "Roboto";
+    line-height: 1.5;
+    color: #fdfcfa;
+    background-color: #FFFEFC;
+    text-align: center;
+
+  }
+
+div {
+    display: inline-block;
+}
+  
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: aquamarine;
+    height: 12hw;
+    border: 12px solid aquamarine;
+}
+
+header div {
+    margin: auto auto;
+    text-align: center;
+    margin-left: 35vw;
+    overflow: hidden;
+}
+
+li {
+
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 16px;
+    font-weight: 300;
+    width: 120px; 
+    text-align: center;
+    background-color: #416e86;
+    border: 5px solid #416e86;
+    border-radius: 2px;
+}
+
+li:hover {
+    background-color: #6DA5C0;
+    border: 5px solid #6DA5C0;
+    border-radius: 2px;
+}
+
+.Logo {
+    float: left;
+    margin: auto auto;
+}
+
+.Logo img {
+    object-fit: cover;
+    margin: auto;
+}
