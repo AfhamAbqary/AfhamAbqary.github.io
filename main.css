@@ -4,7 +4,7 @@ body {
     margin: 0 auto;
     font-family: "Roboto";
     line-height: 1.5;
-    color: #fdfcfa;
+    color: #555;
     background-color: #FFFEFC;
     text-align: center;
 
@@ -70,4 +70,8 @@ li:hover {
     margin: auto;
     max-width: fit-content;
     max-width: fit-content;
+}
+
+p {
+    margin-top: 140px;
 }
