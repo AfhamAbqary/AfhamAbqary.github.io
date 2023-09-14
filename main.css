@@ -41,16 +41,23 @@ li {
     font-size: 16px;
     font-weight: 300;
     width: 120px; 
+    color: #555;
+    font-weight: 600;
     text-align: center;
-    background-color: #416e86;
-    border: 5px solid #416e86;
     border-radius: 2px;
+    background-color: aquamarine;
+    border: 0px solid aquamarine;
+    transition: background-color .5s, border .5s, font-weight .5s;
 }
 
 li:hover {
     background-color: #6DA5C0;
     border: 5px solid #6DA5C0;
+    font-weight: 600;
+    color: #FFFEFC;
     border-radius: 2px;
+    cursor: pointer;
+    transition: background-color .5s, border .5s, font-weight .5s;
 }
 
 .Logo {
@@ -61,4 +68,6 @@ li:hover {
 .Logo img {
     object-fit: cover;
     margin: auto;
+    max-width: fit-content;
+    max-width: fit-content;
 }
