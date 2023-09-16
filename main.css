@@ -2,76 +2,140 @@
 
 body {
     margin: 0 auto;
-    font-family: "Roboto";
+    font-family: "Helvetica", sans-serif;
     line-height: 1.5;
-    color: #555;
-    background-color: #FFFEFC;
+    color: #d7d7d7;
+    background-color:  #0C1821;
     text-align: center;
-
-  }
-
-div {
-    display: inline-block;
 }
-  
-h2 {
-    margin-top: 1em;
-    padding-top: 1em;
-  }
 
-header {
+a {
+    color: #F61067;
+}
+
+a:hover {
+    color: #ff5293;
+}
+
+.header {
+    margin: 0 auto;
+    margin-top: -22px;
+    text-align: center;
     position: fixed;
     width: 100%;
-    background-color: aquamarine;
-    height: 12hw;
-    border: 12px solid aquamarine;
+    background-color: #00F0B5;
 }
 
-header div {
-    margin: auto auto;
-    text-align: center;
-    margin-left: 35vw;
-    overflow: hidden;
-}
-
-li {
-
-    display: inline-block;
-    margin: 10px auto;
-    font-size: 16px;
-    font-weight: 300;
-    width: 120px; 
-    color: #555;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 2px;
-    background-color: aquamarine;
-    border: 0px solid aquamarine;
-    transition: background-color .5s, border .5s, font-weight .5s;
-}
-
-li:hover {
-    background-color: #6DA5C0;
-    border: 5px solid #6DA5C0;
-    font-weight: 600;
-    color: #FFFEFC;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: background-color .5s, border .5s, font-weight .5s;
-}
-
-.Logo {
+.header div {
     float: left;
-    margin: auto auto;
+    margin: 10px 0px 0px 30px;
 }
 
-.Logo img {
-    object-fit: cover;
+.header img {
+    width: 80px;
+    transition: width .5s, background-color .5s, border-radius .5s, padding .5s;
+}
+
+.header img:hover {
+    width: 90px;
+    transition: width .5s, background-color .5s, border-radius .5s, padding .5s;
+    background-color: #43ffd0;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.podcast {
+    clear: both;
+    padding-top: 40px;
+}
+
+.button {
+    display: inline-block;
+    margin: 2px auto;
+    font-size: 14px;
+    font: 'Roboto';
+    font-weight: 500;
+    max-width: 180px; 
+    color: #d7d7d7;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F61067;
+    border: 8px solid #F61067;
+    transition: background-color .3s, border .3s, font-weight .5s, color .3s, border-radius .3s, padding .3s;
+}
+
+.button:hover {
+    background-color: #ff5293;
+    border: 8px solid #ff5293;
+    text-decoration: none;
+    font: 'Roboto';
+    font-weight: 500;
+    color: #d7d7d7;
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color .3s, border .3s, font-weight .5s, color .3s, border-radius .3s, padding .3s;
+}
+
+.content {
+    overflow: auto;
+}
+
+#Introduction {
+    background-color: #1B2A41;
+    padding: 5px;
+    max-width: fit-content;
+    padding: 0.5em 1.75em;
+}
+
+
+#Greeting {
+    margin: 20px 80px;
+    padding: 60px 0px 30px 0px;
+    text-align: left;
+}
+
+#Steps {
+    line-height: 1.5;
+    text-align: left;
+    align-self: center;
+    font-weight: 300;
+    min-width: fit-content;
     margin: auto;
-    max-width: fit-content;
-    max-width: fit-content;
 }
 
-p {
-    margin-top: 140px;
+#questions {
+    overflow: auto;
+    background-color: #142236;
+    padding: 5px 0px 20px 90px;
+    width: 100%;
+    min-width: max-content;
+    text-decoration: none;
+    min-width: fit-content;
+}
+
+#questions div{
+    margin: 10px 20px;
+    margin-top: -10px;
+}
+
+#questions li a{
+    text-decoration: none;
+    transition: font-size .5s;
+}
+
+#questions li a:hover{
+    font-size: 18px;
+    transition: font-size .5s;
+}
+
+#Methodology {
+    overflow: hidden;
+    background-color: #2a374b;
+    border: 5px solid #2a374b;
+    padding: 5px;
+    border-radius: 25px;
+    width: fit-content;
+    min-width: max-content;
 }
