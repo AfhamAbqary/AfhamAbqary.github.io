@@ -10,20 +10,19 @@ body {
 }
 
 a {
-    color: #F61067;
+    color: #f5a23e;
 }
 
 a:hover {
-    color: #ff5293;
+    color: #fec278;
 }
 
 .header {
     margin: 0 auto;
-    margin-top: -22px;
     text-align: center;
-    position: fixed;
+    position: fixed; top: 0;
     width: 100%;
-    background-color: #00F0B5;
+    background-color: #262e39;
 }
 
 .header div {
@@ -46,36 +45,35 @@ a:hover {
 
 .podcast {
     clear: both;
-    padding-top: 40px;
+    margin: auto auto;
+    padding:20px;
 }
 
 .button {
     display: inline-block;
     margin: 2px auto;
+    padding: 3px 6px;
     font-size: 14px;
     font: 'Roboto';
     font-weight: 500;
     max-width: 180px; 
-    color: #d7d7d7;
+    color: rgba(245, 162, 62, 1);
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
-    background-color: #F61067;
-    border: 8px solid #F61067;
-    transition: background-color .3s, border .3s, font-weight .5s, color .3s, border-radius .3s, padding .3s;
+    background-color: rgba(245, 162, 62, 0.3);
+    border: 2px solid rgba(245, 162, 62, 1);
+    transition: background-color .3s, transform .3s, color .3s;
 }
 
 .button:hover {
-    background-color: #ff5293;
-    border: 8px solid #ff5293;
+    color: #d7d7d7;
+    background-color: rgba(245, 162, 62, 1);;
+    transform: translateY(-5px);
     text-decoration: none;
     font: 'Roboto';
-    font-weight: 500;
-    color: #d7d7d7;
-    padding: 3px 10px;
-    border-radius: 15px;
     cursor: pointer;
-    transition: background-color .3s, border .3s, font-weight .5s, color .3s, border-radius .3s, padding .3s;
+    transition: background-color .3s, transform .3s, color .3s;
 }
 
 .content {
@@ -89,11 +87,18 @@ a:hover {
     padding: 0.5em 1.75em;
 }
 
+#Introduction img{
+    clip-path: circle();
+    position: absolute;
+    width: 250px;
+}
+
 
 #Greeting {
-    margin: 20px 80px;
-    padding: 60px 0px 30px 0px;
+    padding: 100px 100px 30px 140px;
     text-align: left;
+    background: url("arquitectura-internet-red.png") no-repeat center center fixed;
+    background-size: cover;
 }
 
 #Steps {
@@ -108,8 +113,8 @@ a:hover {
 #questions {
     overflow: auto;
     background-color: #142236;
-    padding: 5px 0px 20px 90px;
-    width: 100%;
+    padding: 5px 0px 0px 90px;
+    width: 93.8%;
     min-width: max-content;
     text-decoration: none;
     min-width: fit-content;
