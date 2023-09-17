@@ -104,6 +104,7 @@ a:hover {
     padding: 1em 1em 2em 1em;
     margin-bottom: 2em;
     text-align: left;
+    box-shadow: 0 0 100px #1b2b40;
 }
 
 .content-end {
@@ -177,14 +178,15 @@ a:hover {
 /* HOMEPAGE IDs */
 
 #Introduction {
-    background-color: #1B2A41;
+    background: linear-gradient(to left, #1B2A41, #1b2b40);
     padding: 3em 0em;
     height: fit-content;
 }
 
 #Introduction:hover img{
     border: 5px solid rgba(245, 162, 62, 1);
-    transition: border .5s;
+    box-shadow: 0 0 10px rgba(245, 162, 62, 1);
+    transition: border .5s, box-shadow .5s;
 }
 
 #Introduction .Intro-image {
@@ -199,7 +201,7 @@ a:hover {
     margin-right: 1em;
     border-radius: 50%;
     border: 5px solid #213450;
-    transition: border .5s;
+    transition: border .5s, box-shadow .5s;
 }
 
 .Intro-paragraph {
@@ -210,6 +212,7 @@ a:hover {
 
 #Greeting {
     padding: 100px 100px 30px 140px;
+    
     text-align: left;
     line-height: 1.5;
     background: url("img/homepage/arquitectura-internet-red.png") no-repeat center center fixed;
@@ -286,14 +289,26 @@ a:hover {
     margin: 8em auto;
     padding: 4em 6em;
     width: 80%;
-    border: 10px solid linear-gradient(to left, #12222e, #101b23);
+    border: 10px solid linear-gradient(to left, #142236, #101b23);
     border-radius: 25px;
-    background: linear-gradient(to left, #12222e, #101b23)
+    background: linear-gradient(to left, #142236, #101b23)
 }
 
 #bio {
-    display: grid;
-    text-align: center;
+    text-align: left;
     display: inline-block;
-    width: 50%;
+    background: #142236; 
+    border: 3px solid linear-gradient(45deg, #73c4be, white);
+    width: 20%;
+    padding: 0em 1em;
+    margin: 2em 3em;
+}
+
+#bio p{
+    line-height: 1.4;
+}
+
+#bio-section {
+    width: 100%;
+    height: fit-content;
 }
