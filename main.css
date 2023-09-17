@@ -7,6 +7,8 @@ body {
     color: #d7d7d7;
     background-color:  #0C1821;
     text-align: center;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p li {
@@ -120,6 +122,9 @@ a:hover {
     border-collapse: collapse;
     background-color: #1c2f4b;
     color: #e4e4e4;
+    margin: 25px 0;
+    font-size: 0.9em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .table li{
@@ -128,10 +133,15 @@ a:hover {
     color: #d7d7d7;
 }
 
-.table th{
+.table th ,.table td{
     text-align: center;
     padding-right: 1em;
     color: #d7d7d7;
+    padding: 12px 15px;
+}
+
+.table td {
+    background-color: #213657;
 }
 
 .button {
@@ -274,6 +284,10 @@ a:hover {
     transition: transform .3s;
 }
 
+#ISPs-content p{
+    margin-left: 0em;
+}
+
 #ISPs-button span{
     display: block;
 }
@@ -302,6 +316,7 @@ a:hover {
     width: 20%;
     padding: 0em 1em;
     margin: 2em 3em;
+    backdrop-filter: blur(10px);
 }
 
 #bio p{
