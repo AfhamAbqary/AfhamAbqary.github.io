@@ -9,6 +9,10 @@ body {
     text-align: center;
 }
 
+p li {
+    width: 80%;
+}
+
 a {
     color: #f5a23e;
 }
@@ -43,10 +47,90 @@ a:hover {
     padding: 3px 10px;
 }
 
-.podcast {
-    clear: both;
-    margin: auto auto;
-    padding:20px;
+.navigation {
+    box-sizing: border-box;
+    right: -750px;
+    top: 5px;
+    position: relative;
+    width: 590px;
+    height: 47px;
+    background: #333a43;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a{
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    width: 20%;
+    color: #e4e4e4;
+    text-decoration: none;
+    padding: 0 23px;
+}
+
+.navigation a:hover{
+    color: #f5a23e;
+    font-size: large;
+    font-weight: 500;
+}
+
+.content-table {
+    margin: 1em auto;
+    margin-top: -0em;
+    padding: 4em 6em;
+    width: 80%;
+    border: 10px solid #12222e;
+    border-radius: 25px;
+    background-color: #12222e;
+}
+
+.content-table a {
+    transition: transform .3s;
+}
+
+.content-table a:hover {
+    transform: translateY(-10px);
+    transition: transform .3s;
+}
+
+.content {
+    background-color: #213450;
+    border-radius: 15px;
+    border: 5px solid #213450;
+    padding: 1em 1em 2em 1em;
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+.content-end {
+    background-color: #213450;
+    border-radius: 15px;
+    border: 5px solid #213450;
+    padding: 1em 1em;
+    margin: 2em 0em;
+    text-align: left;
+}
+
+.table {
+    border-collapse: collapse;
+    background-color: #1c2f4b;
+    color: #e4e4e4;
+}
+
+.table li{
+    text-align: left;
+    padding-right: 1em;
+    color: #d7d7d7;
+}
+
+.table th{
+    text-align: center;
+    padding-right: 1em;
+    color: #d7d7d7;
 }
 
 .button {
@@ -54,7 +138,7 @@ a:hover {
     margin: 2px auto;
     padding: 3px 6px;
     font-size: 14px;
-    font: 'Roboto';
+    font: 'Poppins';
     font-weight: 500;
     max-width: 180px; 
     color: rgba(245, 162, 62, 1);
@@ -68,36 +152,67 @@ a:hover {
 
 .button:hover {
     color: #d7d7d7;
-    background-color: rgba(245, 162, 62, 1);;
+    background-color: rgba(245, 162, 62, 1);
     transform: translateY(-5px);
     text-decoration: none;
-    font: 'Roboto';
     cursor: pointer;
     transition: background-color .3s, transform .3s, color .3s;
 }
 
-.content {
-    overflow: auto;
+.icon-button {
+    border-radius: 25%;
 }
+
+.podcast {
+    clear: both;
+    margin: auto auto;
+    padding:20px;
+    color: #0C1821;
+}
+
+.Intro {
+    overflow: hidden;
+}
+
+/* HOMEPAGE IDs */
 
 #Introduction {
     background-color: #1B2A41;
-    padding: 5px;
-    max-width: fit-content;
-    padding: 0.5em 1.75em;
+    padding: 3em 0em;
+    height: fit-content;
+}
+
+#Introduction:hover img{
+    border: 5px solid rgba(245, 162, 62, 1);
+    transition: border .5s;
+}
+
+#Introduction .Intro-image {
+    width: 35%;
+    float:left;
+    margin: 1em 0em 0em 5.5em;
 }
 
 #Introduction img{
-    clip-path: circle();
-    position: absolute;
-    width: 250px;
+    width: 200px;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: 5px solid #213450;
+    transition: border .5s;
 }
 
+.Intro-paragraph {
+    margin: 1em 0em 0em 2em;
+    text-align: left;
+    width: 93%;
+}
 
 #Greeting {
     padding: 100px 100px 30px 140px;
     text-align: left;
-    background: url("arquitectura-internet-red.png") no-repeat center center fixed;
+    line-height: 1.5;
+    background: url("img/homepage/arquitectura-internet-red.png") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -114,10 +229,10 @@ a:hover {
     overflow: auto;
     background-color: #142236;
     padding: 5px 0px 0px 90px;
-    width: 93.8%;
+    width: 100%;
     min-width: max-content;
-    text-decoration: none;
     min-width: fit-content;
+    text-decoration: none;
 }
 
 #questions div{
@@ -143,4 +258,42 @@ a:hover {
     border-radius: 25px;
     width: fit-content;
     min-width: max-content;
+}
+
+/* ISPs IDs */
+
+#ISPs-button {
+    display: inline-block;
+    margin: 0 1em;
+    overflow: auto;
+    text-align: center;
+    vertical-align: top;
+    transition: transform .3s;
+}
+
+#ISPs-button span{
+    display: block;
+}
+
+#ISPs-button:hover {
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+
+/* Self-promotion IDs */
+
+#content-table {
+    margin: 8em auto;
+    padding: 4em 6em;
+    width: 80%;
+    border: 10px solid linear-gradient(to left, #12222e, #101b23);
+    border-radius: 25px;
+    background: linear-gradient(to left, #12222e, #101b23)
+}
+
+#bio {
+    display: grid;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
 }
