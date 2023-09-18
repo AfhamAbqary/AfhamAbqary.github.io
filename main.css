@@ -118,6 +118,22 @@ a:hover {
     text-align: left;
 }
 
+.list {
+    font-family: "Roboto";
+    border-radius: 15px;
+    width: fit-content;
+    padding: 5px 80px 5px 25px;
+}
+
+.list li {
+    background: #1c2f4b;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 0.2em 5em 0.2em 1em;
+    max-width: 13em;
+    text-align: left;
+}
+
 .table {
     border-collapse: collapse;
     background-color: #1c2f4b;
@@ -286,6 +302,7 @@ a:hover {
 
 #ISPs-content p{
     margin-left: 0em;
+    font-family: "Roboto";
 }
 
 #ISPs-button span{
@@ -316,7 +333,6 @@ a:hover {
     width: 20%;
     padding: 0em 1em;
     margin: 2em 3em;
-    backdrop-filter: blur(10px);
 }
 
 #bio p{
@@ -326,4 +342,12 @@ a:hover {
 #bio-section {
     width: 100%;
     height: fit-content;
+}
+
+#roles {
+    text-align: center;
+    background-color: #213450;
+    border: 3px solid #293e5e;
+    padding: 10px;
+    border-radius: 10px;
 }
