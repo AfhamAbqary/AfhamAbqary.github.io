@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Internet Network</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <style>
+            table {
+                font-family: Arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 2px solid #18273f;
+                border-collapse: collapse;
+                text-align: left;
+                padding: 8px;
+            }
+        </style>
+        </style>
+    </head>
+    <body style="background-image: url('img/homepage/low-poly-grid-haikei bg.svg');">
+
+        <div class="header">
+            <div><a href="index.html"><img src="img/Internet Story.png" alt="Internet Story" width="90"></a></div>
+            <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Welcome to the Internet.html">History</a></li>
+              <li><a href="InternetJob.html" style="color: #f5a23e; font-size: large; font-weight: 500;">Network</a></li>
+              <li><a href="ISPs.html">ISPs</a></li>
+              <li><a href="Packet Radio.html">Alternative</a></li>
+              <li><a href="Self Promotion.html">Members</a></li>
+            </ul>
+          </div>
+        
+        <main class="content-table">
+
+        <section class="content">   
+            <h1>Internet Network</h1>
+
+            <p>When we looked into the word “Internet”, the word actually carries the meaning of “between networks”. There is no centre of the internet, as the internet is a network between different big servers all around the globe connected by either cables, routers, switches and modem.</p>
+
+            <b style="color: #73c4be;">The question is where are these servers located and how do they provide internet?</b>
+        </section>
+
+        <section class="content">
+            <h2>Internet Service Providers</h2>
+
+            <p>In order to answer that question, we need to look into ISPs. ISPs can be split into a 3-tiered Hierarchy.</p>
+            <ul>
+                <li>Tier 1 network (Top)</li>
+                <li>Tier 2 network (Middle)</li>
+                <li>Tier 3 network (Below)</li>
+            </ul>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tiers</th>
+                        <th>Connections</th>
+                        <th>Covered Regions</th>
+                        <th>Clients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Tier 1 Network</th>
+                        <td>Connected to other Tiers 1s free of charge.</td>
+                        <td>The entire globe</td>
+                        <td>Sell connections to Tier 2, sometimes maybe Tiers 3</td>
+                    </tr>
+                    <tr>
+                        <th>Tier 2 Network</th>
+                        <td>Buy connections from Tier 1, maybe establish connections with other Tier 2s free of charge.</td>
+                        <td>Specific region or place(e.g country)</td>
+                        <td>Sell connections to Tier 3</td>
+                    </tr>
+                    <tr>
+                        <th>Tier 3 Network</th>
+                        <td>Buy connections from Tier 2</td>
+                        <td>Small local areas</td>
+                        <td>Local citizens in the area </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <img src="img/Internet Network/DNS diagram.png" alt="DNS ISP" class="content img-zoom" id="DNS-img">
+            <p>When you enter in a website link, for example “<a href="https://www.google.com/" target="_blank">www.google.com</a>”, your computer will connect to your ISP server. The server will check the Domain Name Server (DNS) to see the ip address corresponding to the link entered, and once It has found it, the data will get transferred from one server to the closest server of the receiver through cables.</p>
+            <p>This will happen until your data reach the the address and return HTML packets to your computer so that your browser is able to receive and render the website.</p>
+        </section>
+
+        <section class="content">
+            <h2>TCP/IP Protocol</h2>
+
+            <p>In order for the data to be understood unanimously by all devices, a protocol is established to format the data. This protocol is called the TCP/IP protocol or Transmit Control Protocol/ Internet Protocol which is an improved version of the OSI protocol addressing how data should be broken down, addressed, transmitted, routed and received. The protocol can be broken down into 5 layers. Each 5 layers serve a purpose in the process of making sure your data ends up at the right place:</p>
+
+            <div class="content" id="TCP-prot">
+                <h4>Application</h4>
+                <p>At this <b style="color:#73c4be;">first layer</b>, the data is determined, categorised, processed and encoded through either HTTP, FTP or SMTP.</p>
+            </div>
+            <div  class="content" id="TCP-prot">
+                <h4>Transport</h4>
+                <p>At this <b style="color:#73c4be;">second layer</b>, data is packaged to be sent using either TCP and UDP header. The data is called a segment.</p>
+            </div>
+            <div  class="content" id="TCP-prot">
+                <h4>Network</h4>
+                <p>At this <b style="color:#73c4be;">third layer</b>, data will be packaged with the source and destination IP address as well as other bits of information. The data is called a packet.</p>
+            </div>
+            <div  class="content" id="TCP-prot">
+                <h4>Network</h4>
+                <p>At this <b style="color:#73c4be;">fourth layer</b>, a header with the destination and source MAC address and a trailer with error checking information for the other side is bundled with the data. The data is called a frame.</p>
+            </div>
+            <div  class="content" id="TCP-prot">
+                <h4>Physical</h4>
+                <p>At this <b style="color:#73c4be;">fifth layer</b>, the data is physically transmitted.</p>
+            </div>
+
+            <p>When the computer receives the frame, it will decapsulate it and check the MAC address to see if it is at the right destination. If it is successful, it will be processed further and the IP address destination will be checked whether it is correct or not. If the address is valid, the transport layer information and the application layer data is read by the computer.</p>
+        </section>
+
+        <section class="content">
+            <h2>Creating my own TCP connection using Python</h2>
+            <p>&emsp;Using python, we can actually try to recreate our own TCP connection by using the socket library built into python. First of all, we need to actually have a server for connection so that the client can send and receive requests. I rented out a server by <a href="https://www.digitalocean.com">Digital Ocean</a> because of its cheap price and reasonable server location.</p>
+            <img src="img/Internet Network/Server.png" alt="Server" class="img img-zoom" id="Server-img">
+            <p>&emsp;Now that we have our server, we can now create the code for the server side by using python. By following some simple tutorial and adjusting our code to fit into our requirements, we can create a server connection that can wait for connection and receives messages from the client.</p>
+            <p>&emsp;How it works is the code will create a socket at first, which is an endpoint of a two-way communication link between two programs running on the network. A socket is bound to a port number so that the TCP layer can identify the application that data is destined to be sent to. Our port number will be 9999, which is a TCP port that is free to use. This is important because some port numbers are reserved to a particular server, so no other process ever uses it.</p>
+            <p>&emsp;After creating a socket, the code will listen for a client request so that a connection can be established. Once it is established, it can send messages to the client. One thing to keep in mind though is the messages need to be encoded into byte format  before being sent through the internet to ensure the integrity and usability of data.</p>
+        <div>
+
+<pre>
+import socket
+
+#Create a socket
+def create_socket():
+    try:
+        global host
+        global port
+        global sock
+        host = ""
+        port = 9999
+        sock = socket.socket()
+   
+    except socket.error as msg:
+        print(str(msg))
+
+#Binding the socket and listening for connections
+def bind_socket():
+    try:
+        global host
+        global port
+        global sock
+        
+        
+        print("Binding " + str(port))
+        
+        
+        sock.bind((host, port))
+        sock.listen(5)
+        
+        
+    except socket.error as msg:
+        print(str(msg))
+        bind_socket()
+
+        #Establish connection with client
+        def socket_accept():
+            conn, address = sock.accept()
+            print("Connection has been established" , address[0] , str(address[1]))
+            send_commands(conn)
+            conn.close()
+        
+        
+#Send commands
+def send_commands(conn):
+    while True:
+        cmd = input()
+        if cmd == "quit":
+            conn.close()
+            sock.close()
+        
+        
+        #encode as byte format
+        if len(str.encode(cmd)) > 0:
+            conn.send(str.encode(cmd))
+        
+        
+            #decode as str format and receive in 1024 chunks
+            client_response = str(conn.recv(1024), "utf-8")
+            print(client_response, end="")
+
+def main():
+    create_socket()
+    bind_socket()
+    socket_accept()   
+        
+main()
+</pre>
+
+            <p>&emsp;For our client side, we need to code the program so that it can find the server and receive the appropriate messages. In order to do so, we need to import the socket library again. First, we need to create a socket similar to the server in order to create an endpoint. Now that we have the socket we can connect to the server by using the IP address and the port number of the relevant server. Once a connection is established, the message can be received by the client with ease, but in order for us to read it, we need to decode it first from byte form into strings. Another interesting thing is the messages are received in 1024 chunks, meaning it is split into 1024 parts and sent through the internet to reach us.</p>
+
+<pre>
+import socket
+
+
+sock = socket.socket()
+host = '192.168.0.113'
+port = 9999
+    
+    
+sock.connect((host, port))
+    
+    
+while True:
+    data = sock.recv(1024)
+    frame = data.decode("utf-8")
+    print(frame)
+    sock.send(str.encode("MESSAGE RECEIVED" + frame + "\n"))
+</pre>
+
+            <p>Now that both connections are established, we can now send and read data from the server using the client computer!</p>
+            </div>
+            </section>
+            </main>
+            </body>
+        </html>
